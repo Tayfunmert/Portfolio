@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
-import Logo2 from "../static/Logo2.png";
+import '../style.css';
+import Logo2 from "../../static/Logo2.png";
 
 const ClickableLogo = () => {
   return (
