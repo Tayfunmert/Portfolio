@@ -1,16 +1,45 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* Background Animation */
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents scrolling due to animation */
+  background: linear-gradient(120deg, #384b8e, #24236a, #535C91);
+  background-size: 1000% 100%; /* Stretch the gradient to ensure smooth flow */
+  animation: backgroundMove 15s ease infinite; /* Smooth animation */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Keyframes for smooth background movement */
+@keyframes backgroundMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%; /* Return to the initial position */
+  }
+}
+
+/* Static content container */
+.container {
+  position: relative; /* Ensure content stays centered */
+  z-index: 1; /* Ensure content is above the background */
 }
 
 .myLogo {
+  display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 400px;
 }
 
- .logoImage {
+.logoImage {
   width: 400px;
   height: 400px;
 }
